@@ -172,7 +172,7 @@ export default function App() {
   const renderHome = () => (
     <div className="space-y-8 pb-20">
       <div className="flex items-center gap-3 bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
-        <MapPin className="text-[#E23744]" size={20} />
+        <MapPin className="text-[#FC8019]" size={20} />
         <div className="flex-1">
           <p className="text-[10px] uppercase font-bold text-gray-400">Current Locality</p>
           <select 
@@ -266,13 +266,13 @@ export default function App() {
               </div>
               <div className="flex items-center gap-3">
                 {inCart ? (
-                  <div className="flex items-center gap-3 bg-red-50 text-[#E23744] px-3 py-1.5 rounded-xl border border-red-100 font-bold">
+                  <div className="flex items-center gap-3 bg-orange-50 text-[#FC8019] px-3 py-1.5 rounded-xl border border-orange-100 font-bold">
                     <button onClick={() => updateCart(item, -1)}><Minus size={16}/></button>
                     <span className="min-w-[12px] text-center">{inCart.quantity}</span>
                     <button onClick={() => updateCart(item, 1)}><Plus size={16}/></button>
                   </div>
                 ) : (
-                  <button onClick={() => updateCart(item, 1)} className="bg-white border border-gray-200 text-[#E23744] px-6 py-2 rounded-xl font-bold shadow-sm hover:bg-gray-50 uppercase text-xs">Add</button>
+                  <button onClick={() => updateCart(item, 1)} className="bg-white border border-gray-200 text-[#FC8019] px-6 py-2 rounded-xl font-bold shadow-sm hover:bg-gray-50 uppercase text-xs">Add</button>
                 )}
               </div>
             </div>
@@ -289,7 +289,7 @@ export default function App() {
         <div className="text-center py-20 bg-white rounded-3xl border border-gray-100">
           <ShoppingBag size={48} className="mx-auto text-gray-200 mb-4" />
           <p className="text-gray-500 font-medium">Your cart is empty</p>
-          <button onClick={() => setView('home')} className="mt-4 text-[#E23744] font-bold">Browse Food</button>
+          <button onClick={() => setView('home')} className="mt-4 text-[#FC8019] font-bold">Browse Food</button>
         </div>
       ) : (
         <div className="space-y-6">
@@ -307,13 +307,13 @@ export default function App() {
             <div className="pt-4 border-t border-gray-50 space-y-2 text-xs font-medium text-gray-500">
               <div className="flex justify-between text-base font-black text-gray-900 pt-2">
                 <span>Grand Total</span>
-                <span className="text-[#E23744]">₹{cartTotal + 65}</span>
+                <span className="text-[#FC8019]">₹{cartTotal + 65}</span>
               </div>
             </div>
           </div>
           <button 
             onClick={placeOrder}
-            className="w-full bg-[#E23744] text-white py-4 rounded-2xl font-bold text-lg hover:shadow-lg transition-all flex items-center justify-center gap-2"
+            className="w-full bg-[#FC8019] text-white py-4 rounded-2xl font-bold text-lg hover:shadow-lg transition-all flex items-center justify-center gap-2"
           >
             Proceed to Payment <ChevronRight />
           </button>
@@ -353,7 +353,7 @@ export default function App() {
 
   const renderProfile = () => (
     <div className="max-w-4xl mx-auto space-y-6 pb-20">
-      <div className="bg-[#E23744] p-8 rounded-3xl text-white">
+      <div className="bg-[#FC8019] p-8 rounded-3xl text-white">
         <div className="flex justify-between items-start">
           <div>
             <h1 className="text-3xl font-black">User Profile</h1>
@@ -394,7 +394,7 @@ export default function App() {
                   <td className="px-6 py-4 font-mono text-[11px] text-blue-600 font-bold">{o.userId}</td>
                   <td className="px-6 py-4 font-mono text-gray-500">{o.id}</td>
                   <td className="px-6 py-4 font-bold text-gray-800">{o.restaurant}</td>
-                  <td className="px-6 py-4 font-black text-[#E23744]">₹{o.amount}</td>
+                  <td className="px-6 py-4 font-black text-[#FC8019]">₹{o.amount}</td>
                   <td className="px-6 py-4">
                     <div className="flex justify-center">
                       {o.rating ? <div className="flex items-center gap-1 bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full font-bold">{o.rating} <Star size={10} fill="currentColor"/></div> : '-'}
@@ -414,18 +414,18 @@ export default function App() {
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 h-16 flex items-center shadow-sm">
         <div className="max-w-6xl mx-auto px-4 w-full flex justify-between items-center">
           <div className="flex items-center gap-2 cursor-pointer transition-transform active:scale-95" onClick={() => setView('home')}>
-            <span className="text-2xl font-black text-[#E23744] tracking-tighter italic">zomato</span>
+            <span className="text-2xl font-black text-[#FC8019] tracking-tighter font-bold">Swiggy</span>
           </div>
           <div className="flex items-center gap-6">
             <div className="hidden sm:flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-100">
                <span className="text-[10px] font-bold text-gray-400 uppercase">User:</span>
-               <span className="text-xs font-mono font-bold text-[#E23744]">{userId}</span>
+               <span className="text-xs font-mono font-bold text-[#FC8019]">{userId}</span>
             </div>
-            <button className={`relative transition-colors ${view === 'cart' ? 'text-[#E23744]' : 'text-gray-500'}`} onClick={() => setView('cart')}>
+            <button className={`relative transition-colors ${view === 'cart' ? 'text-[#FC8019]' : 'text-gray-500'}`} onClick={() => setView('cart')}>
               <ShoppingBag size={24} />
-              {cartCount > 0 && <span className="absolute -top-1 -right-2 bg-[#E23744] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">{cartCount}</span>}
+              {cartCount > 0 && <span className="absolute -top-1 -right-2 bg-[#FC8019] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">{cartCount}</span>}
             </button>
-            <button className={view === 'profile' ? 'text-[#E23744]' : 'text-gray-500'} onClick={() => setView('profile')}><User size={24} /></button>
+            <button className={view === 'profile' ? 'text-[#FC8019]' : 'text-gray-500'} onClick={() => setView('profile')}><User size={24} /></button>
           </div>
         </div>
       </nav>
