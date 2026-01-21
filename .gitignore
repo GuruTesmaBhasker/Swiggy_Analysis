@@ -29,9 +29,38 @@ build/
 .DS_Store
 Thumbs.db
 
-# Python cache
+# Python cache and virtual environments
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .Python
+venv/
+env/
+ENV/
+
+# Backend specific
+backend/.env
+backend/*.env
+backend/api_ignore/
+backend/api_*.py
+backend/*.db
+backend/*.sqlite*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Package lock files (optional - uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
